@@ -1,0 +1,14 @@
+version: '3'
+services:
+  postgresql:
+    image: postgres:17.0
+    volumes:
+      - .data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+    platform: linux/amd64
