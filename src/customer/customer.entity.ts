@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
 
 @Entity('customers')
 export class Customer {
@@ -11,6 +11,6 @@ export class Customer {
     @Column({type: "varchar", length: 255})
     last_name: string;
 
-    @Column({ type: 'timestamp' })
-    date_of_birth: Date;
+    @Column({type: 'date'})
+    date_of_birth: string;
 }

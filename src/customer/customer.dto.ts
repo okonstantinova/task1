@@ -1,4 +1,5 @@
-import {IsString, IsNotEmpty, MaxLength, IsDateString} from 'class-validator';
+import {IsString, IsNotEmpty, MaxLength} from 'class-validator';
+import {IsBirthDateString} from "../validation/date.validation";
 
 export class CreateCustomerDto {
     @IsString()
@@ -11,7 +12,7 @@ export class CreateCustomerDto {
     @MaxLength(255)
     last_name: string;
 
-    @IsDateString()
+    @IsBirthDateString()
     @IsNotEmpty()
-    date_of_birth: Date;
+    date_of_birth: string;
 }
