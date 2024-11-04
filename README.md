@@ -81,3 +81,10 @@ Keep-Alive: timeout=5
 
 {"message":["date_of_birth must be a valid YYYY-MM-DD date only string"],"error":"Bad Request","statusCode":400}
 ```
+
+# Тестирование
+
+Для запуска тестов, покрывающих контроллер, сервис работы с базой данных и валидатор, выполните команду:
+```
+npm run test
+```
